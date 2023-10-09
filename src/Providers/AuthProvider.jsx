@@ -15,7 +15,6 @@ const googleProvider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-
   const createUser = async (email, password, displayName) => {
     try {
       const userCredential = await createUserWithEmailAndPassword(
@@ -24,10 +23,10 @@ const AuthProvider = ({ children }) => {
         password
       );
 
-      // Set the user's displayName
       await updateProfile(userCredential.user, {
         displayName: displayName,
       });
+      console.log("User with displayName:", userCredential.user);
 
       setUser(userCredential.user);
       setLoading(false);

@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { BiLogInCircle } from "react-icons/bi";
 import { FcGoogle } from "react-icons/fc";
+import { toast, ToastContainer } from "react-toastify";
+
 const LogIn = () => {
   const { signInUser, signInWithGoogle } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -18,7 +20,7 @@ const LogIn = () => {
         navigate("/");
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error.message);
       });
   };
   const handleGoogleSignIn = () => {

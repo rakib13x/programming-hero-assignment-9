@@ -1,22 +1,40 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { BiLogOutCircle } from "react-icons/bi";
 import { FcGoogle } from "react-icons/fc";
+import { toast, ToastContainer } from "react-toastify";
 const Register = () => {
   const { createUser } = useContext(AuthContext);
-
-  const handleRegister = (e) => {
+  const navigate = useNavigate();
+  const handleRegister = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(name, email, password);
 
-    createUser(email, password)
-      .then((result) => console.log(result.user))
-      .catch((error) => console.log(error));
+    if (name) {
+      if (password.length < 6) {
+        toast.error("Password should be at least 6 characters long");
+      } else if (!/[A-Z]/.test(password)) {
+        toast.error("Password should at least contain Capital letter");
+      } else if (!/[!@#$%^&*]/.test(password)) {
+        toast.error("Password should contain at least one special character");
+      } else {
+        try {
+          await createUser(email, password, name);
+          window.location.reload();
+        } catch (error) {
+          console.error("Error registering user:", error);
+        }
+      }
+    } else {
+      console.error("Name cannot be null or empty");
+    }
   };
+  navigate("/");
+
   return (
     <div className="hero min-h-screen bg-gray-400 rounded-xl">
       <div className="hero-content flex-col">

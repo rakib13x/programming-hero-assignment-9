@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
-
 import { BiLogOutCircle } from "react-icons/bi";
+import { onAuthStateChanged } from "firebase/auth";
+import auth from "../firebase/firebase.config";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [isLoading, setIsLoading] = useState(true);
@@ -10,12 +11,20 @@ const Navbar = () => {
 
   useEffect(() => {
     if (user) {
-      setTimeout(() => {
-        const { email, displayName } = user;
-        console.log(email, displayName);
-      }, 1000);
-      setUserName(user.displayName || "");
-      setIsLoading(false);
+      // Use onAuthStateChanged to listen for changes in user authentication state
+      const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+        if (currentUser) {
+          // Check if displayName is available
+          if (currentUser.displayName) {
+            setUserName(currentUser.displayName);
+          }
+        }
+        setIsLoading(false);
+      });
+
+      return () => {
+        unsubscribe();
+      };
     }
   }, [user]);
 
