@@ -13,14 +13,10 @@ const EventDetails = () => {
 
   const { bookedEvents, addBooking, removeBooking } = useBookingData(); // Access the booking data context
 
-  // Your component logic here
-
   const handleBooked = () => {
-    // Check if the event is already booked
     if (!bookedEvents.some((event) => event.id === id)) {
       const selectedEvent = cardsData.find((cardData) => cardData?.id == id);
       addBooking(selectedEvent);
-      // Add the event to the bookedEvents array
       toast.success(`Booking successful! Thank you for booking.`);
     }
   };

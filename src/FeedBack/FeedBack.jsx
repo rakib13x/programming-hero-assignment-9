@@ -5,6 +5,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./FeedBack.css";
 import { Pagination, Navigation } from "swiper/modules";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function shuffleArray(array) {
   const shuffledArray = [...array];
@@ -19,6 +21,7 @@ export default function FeedBack() {
   const [showFeedBack, setShowFeedBack] = useState([]);
 
   useEffect(() => {
+    AOS.init({ duration: 2000 });
     fetch("/feedback.json")
       .then((response) => response.json())
       .then((data) => {
@@ -31,25 +34,25 @@ export default function FeedBack() {
   }, []);
 
   return (
-    <div className="pt-[100px]">
+    <div className="pt-[100px] " data-aos="fade-left">
       <div className="pb-[40px]">
         <p className="text-4xl font-bold text-black ">Customer Reviews</p>
         <p className="text-xl pt-2">See what our Customers saying</p>
       </div>
       {/* For Larger Devices (Grid Layout) */}
-      <div className="hidden lg:grid lg:grid-cols-3 lg:gap-4">
+      <div className="hidden lg:grid lg:grid-cols-3 lg:gap-4 ">
         {showFeedBack.map((feedback, index) => (
           <div key={index}>
             <div className="bg-white rounded-lg shadow-md p-6 max-w-md mx-auto mb-4">
               <div className="flex items-center">
                 <img
-                  className="w-12 h-12 rounded-full mr-4"
-                  src="https://via.placeholder.com/50"
+                  className="w-12 h-12 rounded-full mr-4 object-contain"
+                  src={feedback.image}
                   alt="Customer Avatar"
                 />
                 <div>
                   <h2 className="text-lg font-semibold">{feedback.name}</h2>
-                  <p className="text-gray-600">Customer</p>
+                  <p className="text-gray-600">{feedback.profession}</p>
                 </div>
               </div>
               <p className="text-gray-700 mt-4">{feedback.reviews}</p>
@@ -101,15 +104,18 @@ export default function FeedBack() {
           {showFeedBack.map((feedback, index) => (
             <SwiperSlide key={index}>
               <div className="bg-white rounded-lg shadow-md p-6 max-w-md mx-auto mb-4 pt-8">
-                <div className="flex items-center">
-                  <img
-                    className="w-12 h-12 rounded-full mr-4"
-                    src="https://via.placeholder.com/50"
-                    alt="Customer Avatar"
-                  />
+                <div className="flex items-center gap-8">
+                  <div>
+                    <img
+                      className=" rounded-full mr-4 object-cover"
+                      src={feedback.image}
+                      height={2}
+                      alt="Customer Avatar"
+                    />
+                  </div>
                   <div>
                     <h2 className="text-lg font-semibold">{feedback.name}</h2>
-                    <p className="text-gray-600">Customer</p>
+                    <p className="text-gray-600">{feedback.profession}</p>
                   </div>
                 </div>
                 <p className="text-gray-700 mt-4">{feedback.reviews}</p>

@@ -86,9 +86,7 @@ const Navbar = () => {
       </div>
       <div className="flex-none gap-2">
         <div className="">
-          {isLoading ? (
-            <span>Loading...</span>
-          ) : user ? (
+          {user ? (
             <>
               <span className="flex flex-col pr-6">
                 <p className="text-sm text-black">{user.email}</p>{" "}

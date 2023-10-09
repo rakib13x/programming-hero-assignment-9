@@ -2,13 +2,18 @@ import { useNavigate } from "react-router-dom";
 import { TfiShare } from "react-icons/tfi";
 import { FcLike } from "react-icons/fc";
 import { BsArrowRight } from "react-icons/bs";
+import AOS from "aos";
+import { useEffect } from "react";
 const EventsCards = ({ cards }) => {
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+  }, []);
   const navigate = useNavigate();
   const handleViewDetailsClick = () => {
     navigate(`/event-details/${cards.id}`);
   };
   return (
-    <div className="mb-8">
+    <div className="mb-8" data-aos="fade-right">
       <div className="pt-20 relative">
         <div className="bg-base-100 rounded-xl shadow-xl">
           <figure className="relative">
