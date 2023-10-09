@@ -6,8 +6,8 @@ const Footer = () => {
           <nav>
             <header className="footer-title">Services</header>
             <a className="link link-hover">Concert Event</a>
-            <a className="link link-hover">Magic Show Event</a>
-            <a className="link link-hover">StandUp Comedy Event</a>
+            <a className="link link-hover">Magic Show </a>
+            <a className="link link-hover"> Comedy Event</a>
             <a className="link link-hover">Theatre Event</a>
           </nav>
           <nav>
