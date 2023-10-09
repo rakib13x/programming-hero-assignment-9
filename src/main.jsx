@@ -12,22 +12,27 @@ import MyBooking from "./MyBooking/MyBooking.jsx";
 import AuthProvider from "./Providers/AuthProvider";
 import PrivateRoute from "./routes/PrivateRoute.jsx";
 import YourReview from "./YourReview/YourReview.jsx";
+import ErrorPage from "./error/ErrorPage.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
         element: <Home />,
+        errorElement: <ErrorPage />,
       },
       {
         path: "/login",
         element: <LogIn />,
+        errorElement: <ErrorPage />,
       },
       {
         path: "/register",
         element: <Register />,
+        errorElement: <ErrorPage />,
       },
       {
         path: "/event-details/:id",
@@ -36,6 +41,7 @@ const router = createBrowserRouter([
             <EventDetails />,
           </PrivateRoute>
         ),
+        errorElement: <ErrorPage />,
         loader: () => fetch("data.json"),
       },
       {
@@ -45,6 +51,7 @@ const router = createBrowserRouter([
             <MyBooking />
           </PrivateRoute>
         ),
+        errorElement: <ErrorPage />,
       },
       {
         path: "/review",
@@ -53,6 +60,7 @@ const router = createBrowserRouter([
             <YourReview />{" "}
           </PrivateRoute>
         ),
+        errorElement: <ErrorPage />,
       },
     ],
   },

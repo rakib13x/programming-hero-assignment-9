@@ -17,6 +17,7 @@ const LogIn = () => {
     signInUser(email, password)
       .then((result) => {
         console.log(result.user);
+        toast.success("Login successful!");
         navigate("/");
       })
       .catch((error) => {

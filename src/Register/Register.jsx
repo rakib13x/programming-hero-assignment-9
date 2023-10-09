@@ -24,6 +24,7 @@ const Register = () => {
       } else {
         try {
           await createUser(email, password, name);
+          toast.success("Registration successful!");
           window.location.reload();
         } catch (error) {
           console.error("Error registering user:", error);
