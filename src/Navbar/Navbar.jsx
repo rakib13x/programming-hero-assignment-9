@@ -35,7 +35,20 @@ const Navbar = () => {
       })
       .catch((error) => console.log(error));
   };
-  const navBar = (
+  const navBar = user ? (
+    <>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+
+      <li>
+        <NavLink to="/my-booking">My Booking</NavLink>
+      </li>
+      <li>
+        <NavLink to="/review">Give Review</NavLink>
+      </li>
+    </>
+  ) : (
     <>
       <li>
         <NavLink to="/">Home</NavLink>

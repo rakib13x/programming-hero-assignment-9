@@ -6,9 +6,9 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <>
-      <ToastContainer position="top-right" />
       <Navbar />
       <Outlet />
+      <ToastContainer position="bottom-right" />
     </>
   );
 }

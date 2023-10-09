@@ -5,10 +5,10 @@ const Footer = () => {
         <footer className="footer p-10 bg-black text-white grid grid-cols-3">
           <nav>
             <header className="footer-title">Services</header>
-            <a className="link link-hover">Branding</a>
-            <a className="link link-hover">Design</a>
-            <a className="link link-hover">Marketing</a>
-            <a className="link link-hover">Advertisement</a>
+            <a className="link link-hover">Concert Event</a>
+            <a className="link link-hover">Magic Show Event</a>
+            <a className="link link-hover">StandUp Comedy Event</a>
+            <a className="link link-hover">Theatre Event</a>
           </nav>
           <nav>
             <header className="footer-title">Company</header>
