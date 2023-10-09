@@ -1,0 +1,85 @@
+[
+    { 
+        "id" :1,
+        "event_type": "Concert",
+        "event_image":"https://i.ibb.co/xCsqkp5/excited-audience-watching-confetti-fireworks-having-fun-music-festival-night-copy-space.jpg",
+        "event_name": "Summer Music Festival",
+        "date": "2023-07-15",
+        "location": "Central Park, New York",
+        "artists": ["Artist A", "Artist B", "Artist C"],
+        "ticket_price": 50.00,
+        "available_tickets": 5000,
+        "description": "Get ready to immerse yourself in a world of music and euphoria! Join us at the Summer Music Festival for an unforgettable night featuring the incredible talents of Artist A, Artist B, and Artist C. Lose yourself in the melodies, dance under the stars, and create everlasting memories.",
+        "short_description":"Get ready to immerse yourself in a world of..."
+
+    },
+    {
+        "id": 2,
+        "event_type": "Theater",
+        "event_image":"https://i.ibb.co/1b2Hrw2/1137964-123797-OQGLOM-917.jpg",
+        "event_name": "Shakespeare in the Park",
+        "date": "2023-06-30",
+        "location": "Central Park, New York",
+        "play_title": "Romeo and Juliet",
+        "ticket_price": 35.00,
+        "available_tickets": 2000,
+        "description":"Step into the realm of timeless drama! Experience the magic of Shakespeare's Romeo and Juliet at our open-air Theater event. The stage is set for love, tragedy, and exceptional performances that will leave you spellbound.",
+        "short_description":"Step into the realm of timeless drama! Experience..."
+    },
+    {
+        "id": 3,
+        "event_type": "Film Premiere",
+        "event_image": "https://i.ibb.co/CsNqQMX/aditya-vyas-B9-MULm2-UZIk-unsplash.jpg",
+        "event_name": "Movie Premiere",
+        "date": "2023-08-05",
+        "location": "Hollywood Theater, Los Angeles",
+        "film_title": "Action Hero: The Reckoning",
+        "ticket_price": 20.00,
+        "available_tickets": 800,
+        "description":"Join us for a night of glitz and glamour at the Movie Premiere of Action Hero: The Reckoning. Be part of the exclusive audience at the Hollywood Theater in Los Angeles. It's your chance to witness cinematic brilliance like never before.",
+        "short_description":"Join us for a night of glitz and glamour at the Movie..."
+        
+    },
+    {
+        "id":4,
+        "event_type": "Comedy Show",
+        "event_image": "https://i.ibb.co/3vRYNNW/gettyimages-465824970-170667a.jpg",
+        "event_name": " Stand Up Comedy",
+        "date": "2023-09-10",
+        "location": "Comedy Club, Chicago",
+        "comedians": ["Comedian 1", "Comedian 2", "Comedian 3"],
+        "ticket_price": 25.00,
+        "available_tickets": 300,
+        "description":"Prepare for an evening filled with laughter and joy at our Stand-Up Comedy Night! Comedian 1, Comedian 2, and Comedian 3 are here to tickle your funny bone. Get ready for a hilarious ride and an escape from the everyday hustle.",
+        "short_description":"Prepare for an evening filled with laughter and joy..."
+
+    },
+    {
+        "id":5,
+        "event_type": "Sports Event",
+        "event_image":"https://i.ibb.co/XbcDKQ4/Image-from-i-OS-12.webp",
+        "event_name": "NBA Finals",
+        "date": "2023-06-20",
+        "location": "Stadium, Los Angeles",
+        "teams": ["Team A", "Team B"],
+        "ticket_price": 75.00,
+        "available_tickets": 15000,
+        "description":"Experience the thrill of sports history unfolding before your eyes! Join us at the Stadium in Los Angeles for the epic NBA Finals showdown between Team A and Team B. Feel the adrenaline, cheer for your heroes, and be part of the excitement.",
+        "short_description":"Experience the thrill of sports history unfolding before..."
+
+    },
+    {
+        "id":6,
+        "event_type": "Magic Show",
+        "event_image":"https://i.ibb.co/V97QqVs/istockphoto-1138003590-612x612.jpg",
+        "event_name": "Mystic Illusions",
+        "date": "2023-07-25",
+        "location": "Magical Theater, Las Vegas",
+        "magician": "Magician Z",
+        "ticket_price": 40.00,
+        "available_tickets": 500,
+        "description":"Enter a world of wonder and enchantment at the Mystic Illusions show, featuring the mesmerizing Magician Z. The stage is set at the Magical Theater in Las Vegas for mind-bending tricks, optical illusions, and a magical journey like no other.",
+        "short_description":"Enter a world of wonder and enchantment at the Mystic..."
+
+    }
+]
