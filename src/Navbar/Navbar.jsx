@@ -4,6 +4,7 @@ import { AuthContext } from "../Providers/AuthProvider";
 import { BiLogOutCircle } from "react-icons/bi";
 import { onAuthStateChanged } from "firebase/auth";
 import auth from "../firebase/firebase.config";
+import { toast, ToastContainer } from "react-toastify";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [isLoading, setIsLoading] = useState(true);
@@ -11,10 +12,8 @@ const Navbar = () => {
 
   useEffect(() => {
     if (user) {
-      // Use onAuthStateChanged to listen for changes in user authentication state
       const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
         if (currentUser) {
-          // Check if displayName is available
           if (currentUser.displayName) {
             setUserName(currentUser.displayName);
           }
@@ -31,6 +30,7 @@ const Navbar = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
+        toast.success("you have logged out");
         console.log("user Logged Out");
       })
       .catch((error) => console.log(error));
@@ -98,9 +98,11 @@ const Navbar = () => {
               {navBar}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-3xl text-black font-bold">
-            Eventy
-          </a>
+          <Link to="/">
+            <a className="btn btn-ghost normal-case text-3xl text-black font-bold">
+              Eventy
+            </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-4">{navBar}</ul>

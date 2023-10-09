@@ -23,7 +23,7 @@ const EventsCards = ({ cards }) => {
               className="rounded-xl w-full h-[200px] object-cover"
             />
             <div className="absolute top-2 left-2 p-2 bg-white text-black rounded">
-              <span className="text-md font-bold ">$20</span>
+              <span className="text-md font-bold ">${cards.ticket_price}</span>
             </div>
 
             <div className="absolute top-2 right-12 p-2 bg-white rounded-full cursor-pointer">

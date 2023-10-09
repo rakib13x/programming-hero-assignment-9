@@ -26,7 +26,7 @@ export default function FeedBack() {
       .then((response) => response.json())
       .then((data) => {
         const shuffledData = shuffleArray(data);
-        setShowFeedBack(shuffledData); // Set the shuffled data
+        setShowFeedBack(shuffledData);
       })
       .catch((error) => {
         console.log(error);
@@ -39,7 +39,7 @@ export default function FeedBack() {
         <p className="text-4xl font-bold text-black ">Customer Reviews</p>
         <p className="text-xl pt-2">See what our Customers saying</p>
       </div>
-      {/* For Larger Devices (Grid Layout) */}
+
       <div className="hidden lg:grid lg:grid-cols-3 lg:gap-4 ">
         {showFeedBack.map((feedback, index) => (
           <div key={index}>

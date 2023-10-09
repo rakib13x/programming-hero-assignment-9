@@ -6,7 +6,6 @@ import "swiper/swiper-bundle.css";
 const Feedback = () => {
   return (
     <div className="pt-10">
-      {/* For Larger Devices (Grid Layout) */}
       <div className="  hidden lg:grid lg:grid-cols-3 lg:gap-4">
         <div>
           <div className="bg-white rounded-lg shadow-md p-6 max-w-md mx-auto mb-4">
@@ -113,8 +112,7 @@ const Feedback = () => {
               </div>
             </div>
           </div>
-          ;<SwiperSlide>{/* Feedback card content */}</SwiperSlide>
-          {/* Add more SwiperSlide components for additional feedback cards */}
+          ;<SwiperSlide></SwiperSlide>
         </Swiper>
       </div>
     </div>

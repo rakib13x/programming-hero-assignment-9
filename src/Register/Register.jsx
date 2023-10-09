@@ -12,6 +12,7 @@ const Register = () => {
   const handleGoogleSignUp = async () => {
     signInWithGoogle()
       .then((result) => {
+        toast.success("SignUp Successful");
         console.log(result.user);
         navigate("/");
       })

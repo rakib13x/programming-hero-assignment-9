@@ -11,7 +11,7 @@ const EventDetails = () => {
     : "";
   const [booked, setBooked] = useState(false);
 
-  const { bookedEvents, addBooking, removeBooking } = useBookingData(); // Access the booking data context
+  const { bookedEvents, addBooking, removeBooking } = useBookingData();
 
   const handleBooked = () => {
     if (!bookedEvents.some((event) => event.id === id)) {
@@ -40,16 +40,15 @@ const EventDetails = () => {
       </div>
       <div className="pt-8">
         <button
-          className={` h-12 w-[20%] left-6 bottom-4 z-100 border-none hover:bg-slate-300 duration-500 text-white text-xl rounded ${
+          className={` h-16 w-[20%] left-6 bottom-4 z-100 border-none hover:bg-slate-300 duration-500 text-white text-xl rounded ${
             booked ? "bg-green-500" : "bg-black"
           }`}
           onClick={handleBooked}
           disabled={false}
         >
-          {booked ? "Booked " : " Book a event with us"}
+          {booked ? "Booked " : " Book a event"}
         </button>
       </div>
-      <ToastContainer />
     </div>
   );
 };

@@ -7,7 +7,7 @@
         "date": "2023-07-15",
         "location": "Central Park, New York",
         "artists": ["Artist A", "Artist B", "Artist C"],
-        "ticket_price": 50.00,
+        "ticket_price": 10000.00,
         "available_tickets": 5000,
         "description": "Get ready to immerse yourself in a world of music and euphoria! Join us at the Summer Music Festival for an unforgettable night featuring the incredible talents of Artist A, Artist B, and Artist C. Lose yourself in the melodies, dance under the stars, and create everlasting memories.",
         "short_description":"Get ready to immerse yourself in a world of..."
@@ -21,7 +21,7 @@
         "date": "2023-06-30",
         "location": "Central Park, New York",
         "play_title": "Romeo and Juliet",
-        "ticket_price": 35.00,
+        "ticket_price": 2000.00,
         "available_tickets": 2000,
         "description":"Step into the realm of timeless drama! Experience the magic of Shakespeare's Romeo and Juliet at our open-air Theater event. The stage is set for love, tragedy, and exceptional performances that will leave you spellbound.",
         "short_description":"Step into the realm of timeless drama! Experience..."
@@ -34,7 +34,7 @@
         "date": "2023-08-05",
         "location": "Hollywood Theater, Los Angeles",
         "film_title": "Action Hero: The Reckoning",
-        "ticket_price": 20.00,
+        "ticket_price": 3000.00,
         "available_tickets": 800,
         "description":"Join us for a night of glitz and glamour at the Movie Premiere of Action Hero: The Reckoning. Be part of the exclusive audience at the Hollywood Theater in Los Angeles. It's your chance to witness cinematic brilliance like never before.",
         "short_description":"Join us for a night of glitz and glamour at the Movie..."
@@ -48,7 +48,7 @@
         "date": "2023-09-10",
         "location": "Comedy Club, Chicago",
         "comedians": ["Comedian 1", "Comedian 2", "Comedian 3"],
-        "ticket_price": 25.00,
+        "ticket_price": 8000.00,
         "available_tickets": 300,
         "description":"Prepare for an evening filled with laughter and joy at our Stand-Up Comedy Night! Comedian 1, Comedian 2, and Comedian 3 are here to tickle your funny bone. Get ready for a hilarious ride and an escape from the everyday hustle.",
         "short_description":"Prepare for an evening filled with laughter and joy..."
@@ -62,7 +62,7 @@
         "date": "2023-06-20",
         "location": "Stadium, Los Angeles",
         "teams": ["Team A", "Team B"],
-        "ticket_price": 75.00,
+        "ticket_price": 12000.00,
         "available_tickets": 15000,
         "description":"Experience the thrill of sports history unfolding before your eyes! Join us at the Stadium in Los Angeles for the epic NBA Finals showdown between Team A and Team B. Feel the adrenaline, cheer for your heroes, and be part of the excitement.",
         "short_description":"Experience the thrill of sports history unfolding before..."
@@ -76,7 +76,7 @@
         "date": "2023-07-25",
         "location": "Magical Theater, Las Vegas",
         "magician": "Magician Z",
-        "ticket_price": 40.00,
+        "ticket_price": 7000.00,
         "available_tickets": 500,
         "description":"Enter a world of wonder and enchantment at the Mystic Illusions show, featuring the mesmerizing Magician Z. The stage is set at the Magical Theater in Las Vegas for mind-bending tricks, optical illusions, and a magical journey like no other.",
         "short_description":"Enter a world of wonder and enchantment at the Mystic..."
